@@ -1,0 +1,25 @@
+name: "HA Diagnostics Helper"
+version: "1.0.0"
+slug: "ha_diagnostics"
+description: "Diagnostic and troubleshooting tool for Home Assistant"
+url: "https://github.com/yourusername/ha-diagnostics"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: application
+boot: auto
+ingress: true
+panel_icon: mdi:tools
+init: false
+map:
+  - "config:rw"
+  - "share:rw"
+options:
+  log_level: info
+  scan_interval: 300
+schema:
+  log_level: list(trace|debug|info|warning|error|critical)
+  scan_interval: int
